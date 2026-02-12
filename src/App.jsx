@@ -6,9 +6,9 @@ const App = () => {
   const [name, setName] = useState("hello");
   const [data, setData] = useState([]);
   const api = `https://www.omdbapi.com/?s=panda&apikey=c65fcde9`;
-  useEffect(() => {
-    axios.get(api).then((data) => setData(data?.data?.Search));
-  }, []);
+    useEffect(() => {
+      axios.get(api).then((data) => setData(data?.data?.Search));
+    }, [api]);
   const costomName = (e) => {
     const item = e.target.value;
     setName(item);
